@@ -24,4 +24,13 @@ public class GreetingResource {
         }
         return message + " " + name + "! (environment: " + environment + ")";
     }
+
+    @GET
+    @Path("/info")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Info info() {
+        return new Info(message, environment);
+    }
+
+    public record Info(String message, String environment) {}
 }
