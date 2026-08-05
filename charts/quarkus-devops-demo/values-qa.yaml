@@ -1,0 +1,18 @@
+replicaCount: 2
+
+image:
+  repository: bhanurajeev/quarkus-devops-demo
+  tag: "qa-local"
+  pullPolicy: IfNotPresent
+
+env:
+  APP_ENVIRONMENT: "qa"
+  GREETING_MESSAGE: "Hello from QA (Helm)"
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
