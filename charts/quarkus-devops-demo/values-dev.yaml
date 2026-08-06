@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: bhanurajeev/quarkus-devops-demo
+  tag: "dev-local"
+  pullPolicy: IfNotPresent
+
+env:
+  APP_ENVIRONMENT: "dev"
+  GREETING_MESSAGE: "Hello from DEV (Helm)"
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
