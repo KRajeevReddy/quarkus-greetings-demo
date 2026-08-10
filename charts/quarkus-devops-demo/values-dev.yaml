@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: bhanurajeev/quarkus-devops-demo
-  tag: "dev-local"
+  tag: "8-dev"
   pullPolicy: IfNotPresent
 
 env:
